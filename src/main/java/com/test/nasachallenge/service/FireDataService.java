@@ -58,10 +58,10 @@ public class FireDataService {
     public List<FireData> getFireData(){
 
         // Obtener la fecha actual
-        String currentDate = LocalDate.now().toString();
+       // String currentDate = LocalDate.now().toString();
 
         String apiKey = "e3b77479e44d031cd3d589c31db9f3ca";
-        String url = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/" + apiKey + "/VIIRS_SNPP_NRT/-69.6,-23.0,-57.0,-9.5/1/"+currentDate;
+        String url = "https://firms.modaps.eosdis.nasa.gov/api/area/csv/" + apiKey + "/VIIRS_SNPP_NRT/-69.6,-23.0,-57.0,-9.5/1/2024-10-05";
 
         String csvData = restTemplate.getForObject(url, String.class);
 
