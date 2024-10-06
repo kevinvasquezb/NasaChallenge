@@ -26,4 +26,9 @@ public class MainController {
     public String afectado(){
         return "affected";
     }
+
+    @GetMapping("/contacto")
+    public String contacto(){
+        return "contacto";
+    }
 }

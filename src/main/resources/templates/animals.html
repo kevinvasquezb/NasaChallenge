@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +45,7 @@
             padding: 15px;
             width: 200px;
             transition: transform 0.2s; /* Efecto de animación */
+            text-align: center;
         }
 
         .card:hover {
@@ -54,6 +55,15 @@
         .card img {
             max-width: 100%;
             border-radius: 5px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .card a:hover {
+            color: #4CAF50;
         }
 
         footer {
@@ -77,26 +87,34 @@
         <p>Hasta la fecha la cantidad de animales afectados por los incendios es xxxx.</p>
 
         <div class="card">
-            <h2>Jaguar</h2>
-            <img src="/img/jaguar.png" alt="Jaguar" />
+            <h2><a href="https://www.worldwildlife.org/species/jaguar" target="_blank">Jaguar</a></h2>
+            <a href="https://www.worldwildlife.org/species/jaguar" target="_blank">
+                <img src="/img/jaguar.png" alt="Jaguar" />
+            </a>
             <p>The Jaguar is affected by habitat loss due to forest fires, which impact their hunting grounds.</p>
         </div>
 
         <div class="card">
-            <h2>Capybara</h2>
-            <img src="/img/capibara.png" alt="Capybara" />
+            <h2><a href="https://www.worldwildlife.org/species/capybara" target="_blank">Capybara</a></h2>
+            <a href="https://www.worldwildlife.org/species/capybara" target="_blank">
+                <img src="/img/capibara.png" alt="Capybara" />
+            </a>
             <p>Capybaras are losing their natural habitat as fires spread across wetlands and forests.</p>
         </div>
 
         <div class="card">
-            <h2>Andean Condor</h2>
-            <img src="/img/condor.png" alt="Andean Condor" />
+            <h2><a href="https://www.birdlife.org/worldwide/species/andean-condor" target="_blank">Andean Condor</a></h2>
+            <a href="https://www.birdlife.org/worldwide/species/andean-condor" target="_blank">
+                <img src="/img/condor.png" alt="Andean Condor" />
+            </a>
             <p>The Andean Condor faces food shortages as fires destroy their feeding grounds.</p>
         </div>
 
         <div class="card">
-            <h2>Tamarin Monkey</h2>
-            <img th:src="@{/img/mono}" alt="Tamarin Monkey" />
+            <h2><a href="https://en.wikipedia.org/wiki/Tamarin" target="_blank">Tamarin Monkey</a></h2>
+            <a href="https://en.wikipedia.org/wiki/Tamarin" target="_blank">
+                <img src="/img/mono.png" alt="Tamarin Monkey" />
+            </a>
             <p>Fires threaten the habitat of Tamarin Monkeys, disrupting their social structures.</p>
         </div>
 
@@ -105,7 +123,7 @@
 </main>
 
 <footer>
-    <p>&copy; 2024 Wildlife Conservation</p>
+    <p>&copy; 2024 Wildlife Conservation | <a href="https://www.worldwildlife.org/" target="_blank" style="color: white;">World Wildlife Fund</a></p>
 </footer>
 </body>
 </html>
