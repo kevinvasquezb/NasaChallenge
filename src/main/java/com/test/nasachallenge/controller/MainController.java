@@ -16,4 +16,14 @@ public class MainController {
         // Carga la página del mapa (map.html)
         return "map";
     }
+
+    @GetMapping("/animales")
+    public String animales(){
+        return "animals";
+    }
+
+    @GetMapping("/afectado")
+    public String afectado(){
+        return "affected";
+    }
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Affected by Fires in Bolivia</title>
+
+    <!-- CSS Integrado -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow-x: auto; /* Permitir desplazamiento horizontal */
+            padding: 10px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            transition: transform 0.2s; /* Efecto de animación */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Animals Affected by Fires in Bolivia</h1>
+</header>
+
+<main>
+    <section class="card-container">
+        <p>Hasta la fecha la cantidad de animales afectados por los incendios es xxxx.</p>
+
+        <div class="card">
+            <h2>Jaguar</h2>
+            <img src="/img/jaguar.png" alt="Jaguar" />
+            <p>The Jaguar is affected by habitat loss due to forest fires, which impact their hunting grounds.</p>
+        </div>
+
+        <div class="card">
+            <h2>Capybara</h2>
+            <img src="/img/capibara.png" alt="Capybara" />
+            <p>Capybaras are losing their natural habitat as fires spread across wetlands and forests.</p>
+        </div>
+
+        <div class="card">
+            <h2>Andean Condor</h2>
+            <img src="/img/condor.png" alt="Andean Condor" />
+            <p>The Andean Condor faces food shortages as fires destroy their feeding grounds.</p>
+        </div>
+
+        <div class="card">
+            <h2>Tamarin Monkey</h2>
+            <img th:src="@{/img/mono}" alt="Tamarin Monkey" />
+            <p>Fires threaten the habitat of Tamarin Monkeys, disrupting their social structures.</p>
+        </div>
+
+        <!-- Agrega más tarjetas de animales según sea necesario -->
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Wildlife Conservation</p>
+</footer>
+</body>
+</html>
